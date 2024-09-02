@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter X Eklentisi",
+  "version": "1.0",
+  "description": "Twitter için özel JS kodu çalıştırır.",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://twitter.com/*",
+        "https://*.twitter.com/*",
+        "https://x.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+
+    }
+  ]
+}
+
